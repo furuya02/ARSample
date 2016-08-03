@@ -21,6 +21,7 @@ Xcode 7.3.1
 
 ```
 $ git clone https://github.com/furuya02/ARSample
+$ cd ARSample
 $ xcode ARSample.xcodeproj
 ```
 
