@@ -126,10 +126,10 @@
 #pragma mark - Private Method
 
 // 方位角
-- (float) angle :(CLLocationCoordinate2D) coordinate1: (CLLocationCoordinate2D) coordinate2
+- (float) angle :(CLLocationCoordinate2D) coordinate: (CLLocationCoordinate2D) coordinate2
 {
-    float longitudinalDiff = coordinate2.longitude - coordinate1.longitude;
-    float latitudinalDiff  = coordinate2.latitude - coordinate1.latitude;
+    float longitudinalDiff = coordinate2.longitude - coordinate.longitude;
+    float latitudinalDiff  = coordinate2.latitude - coordinate.latitude;
     float azimuth = (M_PI * .5f) - atan(latitudinalDiff / longitudinalDiff);
     azimuth *= 360 / (M_PI*2);
     if (longitudinalDiff > 0) {
