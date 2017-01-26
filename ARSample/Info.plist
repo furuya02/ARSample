@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    
-    
-    <key>NSCameraUsageDescription</key>
-    <string>背景を表示するためにカメラを使用します</string>
-    
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -26,13 +21,17 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>背景を表示するためにカメラを使用します</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>ARView Sample</string>
 	<key>NSLocationWhenInUseDescription</key>
 	<string>ARView Sample</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>背景を表示するためにカメラを使用します</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
