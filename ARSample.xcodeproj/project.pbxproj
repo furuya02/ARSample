@@ -48,6 +48,7 @@
 		D72D57591D4F28350073CDE1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D72D575B1D5055AF0073CDE1 /* mesoko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mesoko.png; sourceTree = "<group>"; };
 		D72D575D1D5062A80073CDE1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D79BCDD61E3B0F3E00096694 /* ARSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARSample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		D72D57201D4B23AB0073CDE1 /* ARSample */ = {
 			isa = PBXGroup;
 			children = (
+				D79BCDD61E3B0F3E00096694 /* ARSample.entitlements */,
 				D72D575B1D5055AF0073CDE1 /* mesoko.png */,
 				D72D57241D4B23AB0073CDE1 /* AppDelegate.h */,
 				D72D57251D4B23AB0073CDE1 /* AppDelegate.m */,
@@ -176,6 +178,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = T32GQ84AVX;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					D72D57361D4B23AC0073CDE1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -363,14 +370,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = ARSample/ARSample.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T32GQ84AVX;
 				INFOPLIST_FILE = ARSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.sapporoworks.sapporo-mesoko";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2300c45e-45f7-4c76-ae03-192c2294d405";
-				PROVISIONING_PROFILE_SPECIFIER = SapporoMesoko;
+				PROVISIONING_PROFILE = "5f6ec0bc-f56a-4003-9aa7-8baa950ede5d";
+				PROVISIONING_PROFILE_SPECIFIER = SapporoMesokoDev;
 			};
 			name = Debug;
 		};
@@ -378,14 +386,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = ARSample/ARSample.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T32GQ84AVX;
 				INFOPLIST_FILE = ARSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.sapporoworks.sapporo-mesoko";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2300c45e-45f7-4c76-ae03-192c2294d405";
-				PROVISIONING_PROFILE_SPECIFIER = SapporoMesoko;
+				PROVISIONING_PROFILE = "5f6ec0bc-f56a-4003-9aa7-8baa950ede5d";
+				PROVISIONING_PROFILE_SPECIFIER = SapporoMesokoDev;
 			};
 			name = Release;
 		};

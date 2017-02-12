@@ -60,7 +60,7 @@
         cameraPicker.cameraOverlayView = self.arView;
 
         [self presentViewController:cameraPicker animated:NO completion:nil];
-        [self.arView startAnimation];
+        [_arView startAnimation];
     }
 
     // コンパスが使用可能かどうかチェックする
@@ -76,9 +76,9 @@
     // 位置情報取得の許可
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         // アプリ起動時のみの位置情報を取得の許可を得る
-        [ self.locationManager requestAlwaysAuthorization];
+        [_locationManager requestWhenInUseAuthorization];
     }
-    [self.locationManager startUpdatingLocation];
+    [_locationManager startUpdatingLocation];
 
     // ジャイロ情報
     _motionManager = [[CMMotionManager alloc] init];
