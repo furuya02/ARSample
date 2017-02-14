@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71037D11E52B582007CCF79 /* GuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71037D01E52B582007CCF79 /* GuideView.xib */; };
+		D71037D71E52C241007CCF79 /* CameraSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71037D61E52C241007CCF79 /* CameraSubViewController.m */; };
+		D71037DA1E52C6E0007CCF79 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71037D91E52C6E0007CCF79 /* GuideViewController.m */; };
 		D72D57231D4B23AB0073CDE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D72D57221D4B23AB0073CDE1 /* main.m */; };
 		D72D57261D4B23AB0073CDE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D72D57251D4B23AB0073CDE1 /* AppDelegate.m */; };
 		D72D57291D4B23AB0073CDE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72D57281D4B23AB0073CDE1 /* ViewController.m */; };
@@ -30,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D71037D01E52B582007CCF79 /* GuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideView.xib; sourceTree = "<group>"; };
+		D71037D51E52C241007CCF79 /* CameraSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSubViewController.h; sourceTree = "<group>"; };
+		D71037D61E52C241007CCF79 /* CameraSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSubViewController.m; sourceTree = "<group>"; };
+		D71037D81E52C6E0007CCF79 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuideViewController.h; path = ../GuideViewController.h; sourceTree = "<group>"; };
+		D71037D91E52C6E0007CCF79 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuideViewController.m; path = ../GuideViewController.m; sourceTree = "<group>"; };
 		D72D571E1D4B23AB0073CDE1 /* ARSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72D57221D4B23AB0073CDE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D72D57241D4B23AB0073CDE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				D79BCDD61E3B0F3E00096694 /* ARSample.entitlements */,
+				D71037D81E52C6E0007CCF79 /* GuideViewController.h */,
+				D71037D91E52C6E0007CCF79 /* GuideViewController.m */,
 				D72D575B1D5055AF0073CDE1 /* mesoko.png */,
 				D72D57241D4B23AB0073CDE1 /* AppDelegate.h */,
 				D72D57251D4B23AB0073CDE1 /* AppDelegate.m */,
@@ -106,6 +116,9 @@
 				D72D57211D4B23AB0073CDE1 /* Supporting Files */,
 				D72D57521D4D073F0073CDE1 /* ARView.h */,
 				D72D57531D4D073F0073CDE1 /* ARView.m */,
+				D71037D01E52B582007CCF79 /* GuideView.xib */,
+				D71037D51E52C241007CCF79 /* CameraSubViewController.h */,
+				D71037D61E52C241007CCF79 /* CameraSubViewController.m */,
 			);
 			path = ARSample;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 				D72D57311D4B23AB0073CDE1 /* LaunchScreen.storyboard in Resources */,
 				D72D572E1D4B23AB0073CDE1 /* Assets.xcassets in Resources */,
 				D72D572C1D4B23AB0073CDE1 /* Main.storyboard in Resources */,
+				D71037D11E52B582007CCF79 /* GuideView.xib in Resources */,
 				D72D575C1D5055AF0073CDE1 /* mesoko.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +251,10 @@
 			files = (
 				D72D57291D4B23AB0073CDE1 /* ViewController.m in Sources */,
 				D72D57261D4B23AB0073CDE1 /* AppDelegate.m in Sources */,
+				D71037D71E52C241007CCF79 /* CameraSubViewController.m in Sources */,
 				D72D57231D4B23AB0073CDE1 /* main.m in Sources */,
 				D72D57541D4D073F0073CDE1 /* ARView.m in Sources */,
+				D71037DA1E52C6E0007CCF79 /* GuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

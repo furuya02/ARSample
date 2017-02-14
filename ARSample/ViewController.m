@@ -10,6 +10,7 @@
 #import "ARView.h"
 #import <CoreMotion/CoreMotion.h>
 #import "CoreLocation/CoreLocation.h"
+#import "CameraSubViewController.h"
 
 @interface ViewController ()<CLLocationManagerDelegate>
 
@@ -18,7 +19,6 @@
 @property (nonatomic, strong) ARView *arView;
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic) CLLocationCoordinate2D sapporoStation;
-
 @end
 
 @implementation ViewController
@@ -26,6 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.sapporoStation = CLLocationCoordinate2DMake(43.068514, 141.350937); // 札幌駅
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    //初回起動時のみ
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:@"firstRun"]) {
+        [userDefaults setObject:[NSDate date] forKey:@"firstRun"];
+        [userDefaults synchronize];
+        // ガイド表示
+        [self performSegueWithIdentifier:@"goGuideView" sender:self];
+    }
 }
 
 - (void)viewDidLayoutSubviews
@@ -40,12 +52,14 @@
 
     // ARビュー作成
     self.arView = [[ARView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
     sleep(2.0); // ARビュの生成に時間がかかるようで、すぐにカメラのビューに載せると認識されない
 
     // カメラ
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
-        UIImagePickerController *cameraPicker = [[UIImagePickerController alloc] init];
+        //UIImagePickerController *cameraPicker = [[UIImagePickerController alloc] init];
+        CameraSubViewController *cameraPicker = [[CameraSubViewController alloc] init];
         cameraPicker.sourceType = sourceType;
         //cameraPicker.delegate = self;
         cameraPicker.showsCameraControls = NO;
@@ -93,6 +107,7 @@
          ];
     }
 }
+
 
 #pragma mark - Notification
 
